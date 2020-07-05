@@ -88,6 +88,17 @@ body#page-top
           .flex-shrink-0
             span.text-primary
               | Abril 2019 - Octubre 2019
+        .resume-item.d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+          .resume-content
+            h3.mb-0
+              | DESARROLLADOR RUBY ON RAILS
+            .subheading.mb-3
+              |  e-Learning solutions - Empresa
+            p
+              | firma con más de 18 años de experiencia, especializada en soluciones tecnológicas en la nube para desarrollo del Talento Humano, consultoría para apoyo en la implementación de la solución y capacitación a los administradores y a los usuarios. Aqui enfoco principalmente en el desarrollo backend con Ruby como principal lenguaje de programacion y frontend, haciendo uso de HTML5, CSS y JavaScript. Mejoramiento y mantenimiento de la plataforma, haciendo uso de Ruby on Rails. Aparte de esto, tambien se aplica constantemente el manejo de Bases de datos segun las operaciones necesarias.
+          .flex-shrink-0
+            span.text-primary
+              | Diciembre 2019 - Actualmente
     hr.m-0
     section#education.resume-section.p-3.p-lg-5.d-flex.align-items-center
       .w-100
@@ -210,4 +221,47 @@ body#page-top
     script[src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"]
     script[src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"]
     script[src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"]
-    script[src="js/scripts.js"]
+
+    javascript:
+        /*!
+            * Start Bootstrap - Resume v6.0.1 (https://startbootstrap.com/template-overviews/resume)
+            * Copyright 2013-2020 Start Bootstrap
+            * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
+            */
+        (function ($) {
+            "use strict"; // Start of use strict
+
+            // Smooth scrolling using jQuery easing
+            $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+                if (
+                    location.pathname.replace(/^\//, "") ==
+                    this.pathname.replace(/^\//, "") &&
+                    location.hostname == this.hostname
+                ) {
+                    var target = $(this.hash);
+                    target = target.length
+                        ? target
+                        : $("[name=" + this.hash.slice(1) + "]");
+                    if (target.length) {
+                        $("html, body").animate(
+                            {
+                                scrollTop: target.offset().top,
+                            },
+                            1000,
+                            "easeInOutExpo"
+                        );
+                        return false;
+                    }
+                }
+            });
+
+            // Closes responsive menu when a scroll trigger link is clicked
+            $(".js-scroll-trigger").click(function () {
+                $(".navbar-collapse").collapse("hide");
+            });
+
+            // Activate scrollspy to add active class to navbar items on scroll
+            $("body").scrollspy({
+                target: "#sideNav",
+            });
+        })(jQuery); // End of use strict
